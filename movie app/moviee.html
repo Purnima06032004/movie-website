@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Movie App</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+        }
+    
+        /* Login popup */
+        #loginPopup {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.7);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 999;
+        }
+    
+        .popup-content {
+          background: white;
+          padding: 30px;
+          border-radius: 8px;
+          text-align: center;
+        }
+        .popup-content input {
+      margin: 10px 0;
+      padding: 10px;
+      width: 80%;
+    }
+
+    .movie-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: 20px;
+    }
+
+    .movie-card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      width: 200px;
+      padding: 15px;
+      margin: 15px;
+      text-align: center;
+    }
+
+    .movie-card button {
+      padding: 10px 20px;
+      margin-top: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .movie-card button:hover {
+      background-color: #45a049;
+    }
+  </style>
+  </head>
+  <body>
+    <header>
+      <h1 style="color: aliceblue ;text-align:left;">🎬 Movie App</h1>
+      <form id="form">
+        <input type="text" id="search" class="search" placeholder="Search">
+      </form>
+    </header>
+
+    <main id="main"></main>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span id="close-btn">&times;</span>
+        <img id="modal-poster" src="" alt="" />
+        <h2 id="modal-title"></h2>
+        <p id="modal-rating"></p>
+        <p id="modal-price"></p>
+        <button id="buy-btn">Buy Now</button>
+      </div>
+      <!-- Login Popup -->
+<div id="loginPopup">
+    <div class="popup-content">
+      <h2>Login</h2>
+      <input type="text" placeholder="Username" id="username"><br>
+      <input type="password" placeholder="Password" id="password"><br>
+      <button onclick="closeLogin()">Login</button>
+    </div>
+  </div>
+  <!-- Movie Section -->
+<div class="movie-list">
+    <div class="movie-card">
+      <h3>Movie 1</h3>
+      <p>Action thriller</p>
+      <button onclick="buyMovie('Movie 1')">Buy Now</button>
+    </div>
+    <div class="movie-card">
+      <h3>Movie 2</h3>
+      <p>Romantic drama</p>
+      <button onclick="buyMovie('Movie 2')">Buy Now</button>
+    </div>
+    <div class="movie-card">
+      <h3>Movie 3</h3>
+      <p>Sci-fi adventure</p>
+      <button onclick="buyMovie('Movie 3')">Buy Now</button>
+    </div>
+  </div>
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-section about">
+            <h2>🎬 MovieApp</h2>
+            <p>Your daily dose of entertainment. Stream or buy your favorite movies anytime, anywhere.</p>
+          </div>
+      
+          <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Top Movies</a></li>
+              <li><a href="#">Genres</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div><!-- Movie Section -->
+<div class="movie-list">
+  <div class="movie-card">
+    <h3>Movie 1</h3>
+    <p>Action thriller</p>
+    <button onclick="buyMovie('Movie 1')">Buy Now</button>
+  </div>
+  <div class="movie-card">
+    <h3>Movie 2</h3>
+    <p>Romantic drama</p>
+    <button onclick="buyMovie('Movie 2')">Buy Now</button>
+  </div>
+  <div class="movie-card">
+    <h3>Movie 3</h3>
+    <p>Sci-fi adventure</p>
+    <button onclick="buyMovie('Movie 3')">Buy Now</button>
+  </div>
+</div>
+
+      
+          <div class="footer-section social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          &copy; 2025 MovieApp | All Rights Reserved
+        </div>
+      </footer>
+      
+
+
+    <script src="scriptt.js"></script>
+  </body>
+</html>
